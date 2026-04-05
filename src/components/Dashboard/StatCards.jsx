@@ -60,8 +60,8 @@ const StatCards = ({ summary }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
       <StatCard title="Total Balance" amount={summary.balance} type="balance" trend={12.5} />
-      <StatCard title="Monthly Income" amount={summary.income} type="income" trend={8.2} />
-      <StatCard title="Monthly Expenses" amount={summary.expenses} type="expenses" trend={4.1} />
+      <StatCard title="Total Income" amount={summary.income} type="income" trend={8.2} />
+      <StatCard title="Total Expenses" amount={summary.expenses} type="expenses" trend={4.1} />
     </div>
   );
 };
