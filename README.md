@@ -7,8 +7,6 @@
 
 A high-performance, aesthetically pleasing, and feature-rich finance management dashboard. Built with a focus on modern UI/UX principles, glassmorphism, and responsive design. This dashboard provides a comprehensive view of your financial health with real-time data visualization and interactive transaction management.
 
-![Custom Finance Dashboard Preview](file:///C:/Users/SONU/.gemini/antigravity/brain/440ae0de-34a2-422c-aa96-cc81f42b44d5/finance_dashboard_preview_1775396449897.png)
-
 ---
 
 ## ✨ Key Features
