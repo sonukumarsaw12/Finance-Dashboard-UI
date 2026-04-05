@@ -113,32 +113,32 @@ const TransactionModal = ({ isOpen, onClose, onAdd, editingTransaction = null, o
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="relative w-full max-w-lg bg-white dark:bg-slate-900 rounded-[28px] shadow-premium border border-gray-100 dark:border-white/5 overflow-hidden"
+            className="relative w-full max-w-lg bg-white dark:bg-slate-900 rounded-[24px] md:rounded-[28px] shadow-premium border border-gray-100 dark:border-white/5 flex flex-col max-h-[90vh] overflow-hidden"
           >
             {/* Header */}
             <div className={clsx(
-              "relative px-8 py-8 md:px-10 md:py-10 transition-colors duration-500",
+              "shrink-0 relative px-6 py-6 md:px-10 md:py-8 transition-colors duration-500 border-b border-gray-50 dark:border-white/5",
               isIncome ? "bg-emerald-50/30 dark:bg-emerald-500/5" : "bg-primary-50/30 dark:bg-primary-500/5"
             )}>
               <div className="flex items-center justify-between">
                 <div>
-                  <h2 className="text-xl md:text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                  <h2 className="text-lg md:text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
                     {editingTransaction ? 'Edit' : 'New'} <span className={isIncome ? "text-emerald-500" : "text-primary-500"}>Transaction</span>
                   </h2>
-                  <p className="text-[10px] font-black text-gray-400 dark:text-slate-500 uppercase tracking-[0.2em] mt-1.5 opacity-80">
+                  <p className="text-[9px] md:text-[10px] font-black text-gray-400 dark:text-slate-500 uppercase tracking-[0.2em] mt-1 opacity-80">
                     Add new entry to ledger
                   </p>
                 </div>
                 <button 
                   onClick={onClose}
-                  className="p-3 rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-gray-100 dark:border-white/5 text-gray-400 hover:text-rose-500 transition-all hover:scale-110 active:scale-95"
+                  className="p-2 md:p-3 rounded-xl md:rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-gray-100 dark:border-white/5 text-gray-400 hover:text-rose-500 transition-all hover:scale-110 active:scale-95"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="px-8 pb-10 md:px-10 md:pb-12 space-y-8">
+            <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-6 py-6 md:px-10 md:pb-12 space-y-6 md:space-y-8 no-scrollbar">
               {/* Type Toggle */}
               <div className="space-y-4">
                 <label className="text-[10px] font-black text-gray-400 dark:text-slate-500 uppercase tracking-[0.25em] px-2">Type</label>
